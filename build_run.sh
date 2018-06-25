@@ -19,5 +19,6 @@ docker images | grep nodeapp
 docker stop nodeapp
 docker run -d --rm --name nodeapp -v $PWD/conf:/opt/config/DATA -e VAR1=foo -e VAR2=bar -p 3000:8080 docker-registry-default.origin.local/nodeapp:latest
 
+#docker run -d --rm --name nodeapp -v $PWD/conf:/opt/config/DATA -e VAR1=foo -e VAR2=bar -p 3000:8080 --network=freakynet --ip 10.9.9.1 docker-registry-default.origin.local/nodeapp:latest
 
 docker inspect --format='{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' nodeapp

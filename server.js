@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   res.write('<h1>Freaky Hours!</h1>');
   res.write('<h2>VAR1=' + process.env.VAR1 + '</h2><br>');
   res.write('<h2>VAR2=' + process.env.VAR2 + '</h2><br>');
-  res.write('<h2>Content of /opt/config/DATA/CONFIMAPFILE=' + data + '</h2>');
+  res.write('<h2>Content of /opt/config/DATA/world.conf=' + data + '</h2>');
 });
 
 app.listen(PORT, HOST);
